@@ -1,0 +1,29 @@
+.shop-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+.yes {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.yes2 {
+    margin-left: 40px;
+    background: pink;
+
+    padding: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
