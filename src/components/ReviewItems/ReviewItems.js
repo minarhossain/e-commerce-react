@@ -20,7 +20,7 @@ const ReviewItems = ({ product, handleRemoveItem }) => {
                 <div className="delete-container">
                     <button onClick={()=>handleRemoveItem(id)}>
                     
-                        <TrashIcon className="font-size" />
+                        <TrashIcon />
                     </button>
                 </div>
             </div>
