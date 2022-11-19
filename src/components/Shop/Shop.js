@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 
 import './Shop.css'
 const Shop = () => {
-
-    const [products, setProducts] = useState([]);
+    // load data using react-router-dom useLoaderData()
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-        // console.log('product load first before fetch',products)
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-                // console.log('product loaded');
-            });
-    }, []);
+
 
     // code ar bahera theka kono kechu load korla seta sideEffect tai useEffect ar vhetor load korta hobe
     useEffect(() => {
