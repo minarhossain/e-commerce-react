@@ -24,15 +24,21 @@ const Orders = () => {
                         key={product.id}
                         product={product}
                         handleRemoveItem={handleRemoveItem}
-                    
+
                     ></ReviewItems>)
                 }
                 {
                     cart.length === 0 && <h2>No Items for Review. Please <Link to='/'>Shop more</Link> </h2>
                 }
             </div>
-            <div style={{backgroundColor:'orange'}} className="cart-container">
-                <Cart cart={cart} clearCart={clearCart}></Cart>
+            <div style={{ backgroundColor: 'orange' }} className="cart-container">
+                <Cart cart={cart} clearCart={clearCart}>
+                    <Link to='/shipping'>
+                    <button >Proceed Shipping</button>
+                    </Link>
+
+
+                </Cart>
             </div>
         </div>
     );
